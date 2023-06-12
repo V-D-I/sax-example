@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!--<group xmlns:GroupData="file:./group-data.xsd">-->
+
+<GroupData:group xmlns:GroupData="urn:GroupData">
+    <GroupData:faculty>Information technology</GroupData:faculty>
+
+    <GroupData:students>
+        <GroupData:student id="0">
+            <GroupData:name>Ivan Ivanov</GroupData:name>
+            <GroupData:age>17</GroupData:age>
+            <GroupData:phone type="cell">+1 202-918-2132</GroupData:phone>
+            <GroupData:address>
+                <GroupData:building>83</GroupData:building>
+                <GroupData:street>Mulberry Drive Valley Stream</GroupData:street>
+                <GroupData:city>New York</GroupData:city>
+                <GroupData:postcode>10940</GroupData:postcode>
+            </GroupData:address>
+        </GroupData:student>
+        <GroupData:student id="1">
+            <GroupData:name>Petr Petrov</GroupData:name>
+            <GroupData:age>18</GroupData:age>
+            <GroupData:phone type="cell">+1 202-918-2132</GroupData:phone>
+            <GroupData:phone type="home">+1 122-998-1230</GroupData:phone>
+            <GroupData:address>
+                <GroupData:building>917</GroupData:building>
+                <GroupData:street>Mayflower Dr</GroupData:street>
+                <GroupData:city>New York</GroupData:city>
+                <GroupData:postcode>10029</GroupData:postcode>
+            </GroupData:address>
+        </GroupData:student>
+    </GroupData:students>
+</GroupData:group>

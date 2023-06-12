@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="urn:GroupData"
+            elementFormDefault="qualified">
+
+    <xsd:element name="group">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="faculty" type="xsd:string"/>
+                <xsd:element name="students">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="student" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="name" type="xsd:string"/>
+                                        <xsd:element name="age" type="xsd:decimal"/>
+                                        <xsd:element name="phone" maxOccurs="unbounded">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:attribute name="type">
+                                                    <xsd:simpleType>
+                                                        <xsd:restriction base="xsd:string">
+                                                            <xsd:enumeration value="cell"/>
+                                                            <xsd:enumeration value="home"/>
+                                                        </xsd:restriction>
+                                                    </xsd:simpleType>
+                                                </xsd:attribute>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="address">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="building" type="xsd:string"/>
+                                                    <xsd:element name="street" type="xsd:string"/>
+                                                    <xsd:element name="city" type="xsd:string"/>
+                                                    <xsd:element name="postcode" type="xsd:string"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="id" type="xsd:decimal"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
